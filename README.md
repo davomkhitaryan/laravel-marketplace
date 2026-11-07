@@ -142,4 +142,4 @@ Payment integration can be added as a future stage.
 
 Davit Mkhitaryan
 
-GitHub: https://github.com/davitmkh98
+GitHub: [https://github.com/davomkhitaryan](https://github.com/davomkhitaryan)
