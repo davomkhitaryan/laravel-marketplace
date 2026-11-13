@@ -8,6 +8,23 @@ This project demonstrates a complete buyer and seller marketplace workflow, incl
 
 A payment gateway is not currently integrated.
 
+## Screenshots
+
+### Products Page
+![Products](screenshots/products.png)
+
+### Product Details
+![Product Details](screenshots/product-details.png)
+
+### Shopping Cart
+![Shopping Cart](screenshots/cart.png)
+
+### Seller Dashboard
+![Seller Dashboard](screenshots/seller-dashboard.png)
+
+---
+
+
 ## Features
 
 ### Buyer Features
@@ -86,7 +103,7 @@ The project follows Laravel's MVC architecture and uses:
 Clone the repository:
 
 ```bash
-git clone https://github.com/davitmkh98/laravel-marketplace.git
+git clone https://github.com/davomkhitaryan/laravel-marketplace.git
 cd laravel-marketplace
 ```
 
