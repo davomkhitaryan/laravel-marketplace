@@ -76,15 +76,18 @@ A payment gateway is not currently integrated.
 
 ## Technologies
 
-* PHP
-* Laravel
-* MySQL
-* Blade
-* Bootstrap
-* JavaScript
-* Vite
-* HTML
-* CSS
+- PHP 8.2+
+- Laravel 12
+- MySQL
+- Blade
+- Bootstrap 5
+- Tailwind CSS
+- Alpine.js
+- JavaScript
+- Vite
+- HTML
+- CSS
+- Pest (automated testing)
 
 ## Project Structure
 
@@ -121,8 +124,8 @@ npm install
 
 Create the environment file:
 
-```bash
-cp .env.example .env
+```powershell
+Copy-Item .env.example .env
 ```
 
 Generate the application key:
@@ -148,10 +151,23 @@ In another terminal, start Vite:
 ```bash
 npm run dev
 ```
+## Testing
+
+The project uses Pest and Laravel's testing framework.
+
+Run the automated tests with:
+
+```bash
+php artisan test
+```
+
+GitHub Actions automatically runs the test suite on pushes, pull requests, and scheduled daily runs across PHP 8.2, 8.3, and 8.4.
 
 ## Project Status
 
-The core marketplace functionality is implemented and tested, including product management, cart, checkout, orders, seller order management, reviews, wishlist functionality, stock management, and role-based authorization.
+The core marketplace functionality has been implemented, including product management, cart, checkout, orders, seller order management, reviews, wishlist functionality, stock management, and role-based authorization.
+
+Automated tests are configured using Pest and GitHub Actions.
 
 Payment integration can be added as a future stage.
 
