@@ -1,46 +1,58 @@
+
 @extends('layouts.marketplace')
+
 @section('content')
 
-<h1>Create Product</h1>
+<div class="container py-4">
+    <h1 class="mb-4">Create Product</h1>
 
-<form method="POST" action="/products" enctype="multipart/form-data">
-    @csrf
+    <div class="card shadow-sm p-4" style="max-width: 650px;">
 
-    <p>
-        <label>Name:</label><br>
-        <input type="text" name="name">
-    </p>
+        <form method="POST" action="/products" enctype="multipart/form-data">
+            @csrf
 
-    <p>
-        <label>Category:</label><br>
-        <select name="category_id">
-            @foreach($categories as $category)
-                <option value="{{ $category->id }}">
-                    {{ $category->name }}
-                </option>
-            @endforeach
-        </select>
-    </p>
+            <div class="mb-3">
+                <label class="form-label">Name:</label>
+                <input type="text" name="name" class="form-control" required>
+            </div>
 
-    <p>
-        <label>Description:</label><br>
-        <textarea name="description"></textarea>
-    </p>
+            <div class="mb-3">
+                <label class="form-label">Category:</label>
+                <select name="category_id" class="form-select">
+                    @foreach($categories as $category)
+                        <option value="{{ $category->id }}">
+                            {{ $category->name }}
+                        </option>
+                    @endforeach
+                </select>
+            </div>
 
-    <p>
-        <label>Price:</label><br>
-        <input type="number" step="0.01" name="price">
-    </p>
+            <div class="mb-3">
+                <label class="form-label">Description:</label>
+                <textarea name="description" class="form-control" rows="4"></textarea>
+            </div>
 
-    <p>
-        <label>Stock:</label><br>
-        <input type="number" name="stock">
-    </p>
-<p>
-    <label>Product Image:</label><br>
-    <input type="file" name="image">
-</p>
-    <button type="submit">Save Product</button>
+            <div class="mb-3">
+                <label class="form-label">Price:</label>
+                <input type="number" step="0.01" name="price" class="form-control" required>
+            </div>
 
-</form>
+            <div class="mb-3">
+                <label class="form-label">Stock:</label>
+                <input type="number" name="stock" class="form-control" required>
+            </div>
+
+            <div class="mb-4">
+                <label class="form-label">Product Image:</label>
+                <input type="file" name="image" class="form-control">
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+                Save Product
+            </button>
+
+        </form>
+    </div>
+</div>
+
 @endsection
