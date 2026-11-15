@@ -31,7 +31,7 @@ A full-stack e-commerce marketplace built with Laravel 12, where buyers can brow
 ### Seller Features
 - Seller dashboard
 - Create, edit, and delete products
-- Upload product images
+- Upload product image
 - Manage product stock
 - View customer orders
 - Update order statuses
