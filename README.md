@@ -1,12 +1,6 @@
 # Laravel Marketplace
 
-A full-stack e-commerce marketplace built with Laravel, where buyers can browse products, manage a cart, place orders, leave reviews, and manage wishlists. Sellers can manage their products and update order statuses.
-
-## Demo
-
-This project demonstrates a complete buyer and seller marketplace workflow, including product management, cart and checkout, order management, reviews, wishlists, stock management, and role-based authorization.
-
-A payment gateway is not currently integrated.
+A full-stack e-commerce marketplace built with Laravel 12, where buyers can browse products, place orders, manage wishlists, and leave reviews. Sellers can manage products, track stock, and update order statuses.
 
 ## Screenshots
 
@@ -22,57 +16,43 @@ A payment gateway is not currently integrated.
 ### Seller Dashboard
 ![Seller Dashboard](screenshots/seller-dashboard.png)
 
----
-
-
 ## Features
 
 ### Buyer Features
-
-* Browse and search products
-* Sort products by price
-* View product details
-* Add products to cart
-* Update cart quantities
-* Checkout and create orders
-* View order history and order details
-* Track order status
-* Add and remove products from wishlist
-* Leave product reviews and ratings
+- Browse and search products
+- Sort products by price
+- View product details
+- Add products to cart and update quantities
+- Checkout and place orders
+- View order history and track order status
+- Add and remove products from wishlist
+- Leave product reviews and ratings
 
 ### Seller Features
-
-* Seller dashboard
-* Create products
-* Edit products
-* Delete products
-* Upload a product image
-* Manage product stock
-* View customer orders
-* Update order status
-* Seller authorization and access control
+- Seller dashboard
+- Create, edit, and delete products
+- Upload product images
+- Manage product stock
+- View customer orders
+- Update order statuses
 
 ### Security & Authorization
+- User authentication
+- Buyer and seller roles
+- Product ownership authorization
+- Seller-only product and order management
+- Buyers can access only their own orders
+- Stock availability validation
+- Protected routes and controller authorization
 
-* Authentication
-* Buyer and seller roles
-* Product ownership authorization
-* Seller-only product management
-* Seller-only order management
-* Buyers can access only their own orders
-* Stock availability validation
-* Protected routes and controller authorization
+## Order Workflow
 
-## Order Flow
-
-1. Buyer selects a product.
-2. Buyer adds the product to the cart.
-3. Buyer checks out.
-4. An order and order items are created.
-5. Product stock is decreased according to the purchased quantity.
-6. Seller sees the order.
-7. Seller updates the order status.
-8. Buyer can see the updated order status.
+1. Buyer selects a product and adds it to the cart.
+2. Buyer checks out and creates an order.
+3. Order items are saved in the database.
+4. Product stock is reduced according to purchased quantities.
+5. Seller views the order and updates its status.
+6. Buyer can track the updated order status.
 
 ## Technologies
 
@@ -85,21 +65,8 @@ A payment gateway is not currently integrated.
 - Alpine.js
 - JavaScript
 - Vite
-- HTML
-- CSS
-- Pest (automated testing)
-
-## Project Structure
-
-The project follows Laravel's MVC architecture and uses:
-
-* Controllers for application logic
-* Eloquent models and relationships
-* Blade views
-* Database migrations and seeders
-* Policies for authorization
-* Session-based shopping cart
-* RESTful routes
+- HTML and CSS
+- Pest
 
 ## Installation
 
@@ -110,15 +77,10 @@ git clone https://github.com/davomkhitaryan/laravel-marketplace.git
 cd laravel-marketplace
 ```
 
-Install PHP dependencies:
+Install dependencies:
 
 ```bash
 composer install
-```
-
-Install frontend dependencies:
-
-```bash
 npm install
 ```
 
@@ -134,7 +96,7 @@ Generate the application key:
 php artisan key:generate
 ```
 
-Configure the database in `.env`, then run:
+Configure your database credentials in `.env`, then run:
 
 ```bash
 php artisan migrate --seed
@@ -151,28 +113,23 @@ In another terminal, start Vite:
 ```bash
 npm run dev
 ```
+
 ## Testing
 
-The project uses Pest and Laravel's testing framework.
-
-Run the automated tests with:
+Run automated tests using Pest and Laravel's testing framework:
 
 ```bash
 php artisan test
 ```
 
-GitHub Actions automatically runs the test suite on pushes, pull requests, and scheduled daily runs across PHP 8.2, 8.3, and 8.4.
+GitHub Actions workflows are configured to automate project checks.
 
-## Project Status
+## Project Information
 
-The core marketplace functionality has been implemented, including product management, cart, checkout, orders, seller order management, reviews, wishlist functionality, stock management, and role-based authorization.
-
-Automated tests are configured using Pest and GitHub Actions.
-
-Payment integration can be added as a future stage.
+**Payment gateway:** Not currently integrated. Payment integration can be added in a future stage.
 
 ## Author
 
-Davit Mkhitaryan
+**Davit Mkhitaryan**
 
-GitHub: [https://github.com/davomkhitaryan](https://github.com/davomkhitaryan)
+GitHub: https://github.com/davomkhitaryan
